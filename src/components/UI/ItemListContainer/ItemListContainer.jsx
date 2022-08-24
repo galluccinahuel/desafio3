@@ -7,7 +7,7 @@ export function ItemListContainer(props){
     return(
 
         <>
-            greeting
+            {greeting}
         </>
 
     )

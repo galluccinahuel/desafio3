@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import Ejemplo from './components/Ejemplo';
+import Ejemplo from './components/UI/Ejemplo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

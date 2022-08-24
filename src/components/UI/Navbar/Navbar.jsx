@@ -1,5 +1,6 @@
 
 import "./Navbar.css";
+import {CartWidget} from "../CartWidget/CartWidget";
 
 export function Navbar(){
 
@@ -12,6 +13,8 @@ export function Navbar(){
                 <li className="navBar-item"><a href="#">Servicios</a></li>
                 <li className="navBar-item"><a href="#">Contacto</a></li>
             </ul>
+            <CartWidget>
+            </CartWidget>
 
         </>
 

@@ -1,9 +1,8 @@
 
+import "./App.css";
 import { Navbar } from "./Navbar/Navbar";
 
-export function App(props){
-
-    const {parrafo} = props; 
+export function App(){
 
     return(
 

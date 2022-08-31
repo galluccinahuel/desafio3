@@ -1,0 +1,16 @@
+
+.BrandBar{
+
+    height: 15vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.BrandBar img{
+
+    height: 100%;
+    width: auto;
+    
+}

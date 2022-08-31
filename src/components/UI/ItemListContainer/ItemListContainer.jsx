@@ -1,17 +1,19 @@
 
+import { useState } from "react";
 import { ItemCount } from "../ItemCount/ItemCount";
 
 export function ItemListContainer(props){
 
     const {greeting} = props;
 
+    const [contador, setContador] = useState(0)
 
     const agregar =(contador)=>{
 
-        console.log("unidades:" + contador);
-
+        setContador(contador);
     }
-
+    
+    
     return(
 
         <>

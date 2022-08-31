@@ -1,4 +1,5 @@
 
+import { ItemCount } from "../ItemCount/ItemCount";
 
 export function ItemListContainer(props){
 
@@ -8,6 +9,7 @@ export function ItemListContainer(props){
 
         <>
             {greeting}
+            <ItemCount stockDisponible={5} initial={1}/>
         </>
 
     )

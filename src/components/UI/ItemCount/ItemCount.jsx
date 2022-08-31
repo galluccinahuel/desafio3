@@ -6,13 +6,13 @@ import './ItemCount.css';
 
 export const ItemCount =(props)=>{
 
-    const{stockDisponible, initial}  = props;
+    const{stockDisponible, valorInitial, agregarProducto}  = props;
 
-    const [contador, setContador] = useState(initial);
+    const [contador, setContador] = useState(valorInitial);
 
 
 
-    const incrementarContador =()=>{
+    const incrementar =()=>{
 
         if(contador < stockDisponible){
 
@@ -21,7 +21,7 @@ export const ItemCount =(props)=>{
 
     }
 
-    const decrementarContador =()=>{
+    const decrementar =()=>{
 
         if(contador <= 1){
 
@@ -31,20 +31,18 @@ export const ItemCount =(props)=>{
         else{
 
             setContador(contador - 1);
-            
+
         }
         
     }
-
-
 
     return (
 
         <div  className="itemCount">
             <p>Unidades: {contador}</p>
-            <button onClick={decrementarContador}>-</button>
-            <button onClick={incrementarContador}>+</button>
-            <button>Agregar</button>
+            <button onClick={decrementar}>-</button>
+            <button onClick={incrementar}>+</button>
+            <button onClick={()=>(agregarProducto(contador))}>Agregar</button>
         </div>
     )
 

@@ -9,8 +9,8 @@ export function App(){
 
         <div className="container">
 
-            <Navbar></Navbar>
-            <ItemListContainer greeting="Hello, world!"></ItemListContainer>
+            <Navbar/>
+            <ItemListContainer greeting="Hello, world!"/>
         </div>
     );
   

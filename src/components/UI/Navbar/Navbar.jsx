@@ -8,15 +8,12 @@ export function Navbar(){
 
         <>
             <ul className="navBar-itemContainer">
-            <h3>
-                Marca
-            </h3>
-                <li className="navBar-item"><a href="#">Home</a></li>
-                <li className="navBar-item"><a href="#">Productos</a></li>
-                <li className="navBar-item"><a href="#">Servicios</a></li>
-                <li className="navBar-item"><a href="#">Contacto</a></li>
-                <CartWidget>
-                </CartWidget>
+                <li className="navBar-item"><a href="#">Alianzas</a></li>
+                <li className="navBar-item"><a href="#">Anillos</a></li>
+                <li className="navBar-item"><a href="#">Pulseras</a></li>
+                <li className="navBar-item"><a href="#">Aros</a></li>
+                <CartWidget/>
+
             </ul>
 
         </>

@@ -8,7 +8,9 @@ export const BrandBar = ()=> {
     return(
 
         <div className="BrandBar">
-            <img src={Marca} alt="" />
+            <a>
+                <img src={Marca} alt="" />
+            </a>
         </div>
 
     )

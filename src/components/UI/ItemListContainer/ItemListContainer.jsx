@@ -16,10 +16,10 @@ export function ItemListContainer(props){
     
     return(
 
-        <>
-            {greeting}
+        <div className="ItemListContainer">
+
             <ItemCount stockDisponible={5} valorInitial={1} agregarProducto={agregar}/>
-        </>
+        </div>
 
     )
 

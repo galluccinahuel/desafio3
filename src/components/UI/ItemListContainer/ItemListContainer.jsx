@@ -5,7 +5,8 @@ import "./ItemListContainer.css";
 import { ItemCount } from "../ItemCount/ItemCount";
 import {AsideBar} from "../AsideBar/AsideBar";
 import {ItemList} from "../ItemList/ItemList";
-
+import imagenAnillo1 from "../../misc/Images/productos/anillos1.jpeg"
+import imagenAnillo2 from "../../misc/Images/productos/anillos2.jpeg"
 
 const arregloProductos =[
 
@@ -13,14 +14,14 @@ const arregloProductos =[
         id: 1,
         title: "anillo",
         price: 5,
-        pictureURL: "../../misc/Images/productos/anillos1.jpeg"
+        pictureURL: imagenAnillo1
 
     },
     {
         id: 2,
         title: "collar",
         price: 10,
-        pictureURL: "../../misc/Images/productos/anillos2.jpeg"
+        pictureURL: imagenAnillo2
 
     }
 ]
@@ -45,8 +46,7 @@ export function ItemListContainer(){
 
             setTimeout(()=>{
 
-                resolve(arregloProductos)
-                reject()
+                resolve(arregloProductos);
 
             }, 2000);
 

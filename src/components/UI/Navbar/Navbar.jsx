@@ -2,6 +2,7 @@
 import "./Navbar.css";
 import {CartWidget} from "../CartWidget/CartWidget";
 
+
 export function Navbar(){
 
     return(

@@ -13,8 +13,8 @@ export function App(){
             <TopBar/>
             <BrandBar/>
             <Navbar/>
-            <ItemListContainer greeting="Hello, world!"/>
+            <ItemListContainer/>
         </div>
-    );
+    )
   
 }

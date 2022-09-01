@@ -1,7 +1,15 @@
 
 .ItemListContainer{
 
-    display: grid;
-
+    display: flex;
+    align-items: center;
+    
 }
 
+.CardContainer{
+
+    display: flex;
+    flex-wrap: wrap;
+
+
+}

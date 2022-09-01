@@ -1,0 +1,44 @@
+
+.AsideBar{
+
+    font-family: 'Courier New', Courier, monospace;
+    width: 15vw;
+    height: 60vh;
+    background-color: #e0cfbd;
+    color: white;
+    
+}
+
+.AsideBar h2{
+
+    padding: 0 20px;
+
+}
+
+.AsideBar-list{
+    
+    margin: auto;
+
+}
+
+
+.AsideBar-list  li{
+    
+    color: white;
+    font-size: xx-large;
+    list-style: none;
+    padding: 5px;
+
+}
+
+.AsideBar-list a{
+
+    text-decoration: none;
+
+}
+
+.AsideBar-list li:hover{
+
+    color: black;
+
+}

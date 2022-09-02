@@ -28,16 +28,6 @@ const arregloProductos =[
 
 export function ItemListContainer(){
 
-
-
-    const [contador, setContador] = useState(0)
-
-    const agregar =(contador)=>{
-
-        setContador(contador);
-    }
-    
-
     const  [datos, setDatos] = useState([]);
 
     const obtenerDatosProductos =()=>{
@@ -78,7 +68,6 @@ export function ItemListContainer(){
         <div className="ItemListContainer">
             <AsideBar/>
             <div className="CardContainer">
-                <ItemCount stockDisponible={5} valorInitial={1} agregarProducto={agregar}/>
                 <ItemList datos = {datos}/>
 
             </div>

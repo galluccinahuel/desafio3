@@ -5,10 +5,3 @@ img{
     width: 200px;
     height: 200px;
 }
-
-.item-container{
-
-    display: flex;
-    flex-direction: row;
-
-}

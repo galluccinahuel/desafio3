@@ -1,4 +1,6 @@
-    
+ 
+import "./ItemList.css"
+
 import {Item} from "../Item/Item";
   
 
@@ -6,22 +8,20 @@ import {Item} from "../Item/Item";
 
         return(
 
-            <div>
+            <div className="itemList">
                 {
                     datos.map((datosProducto)=>{
 
                         return(
 
                             <>
-                                <Item producto={datosProducto}/>
+                                <Item producto = {datosProducto}/>
                             </>
 
                         )
-
                     })
                 }
             </div>
-
         )
 
     }

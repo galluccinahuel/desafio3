@@ -1,7 +1,37 @@
 
+.item{
+
+    margin: 0 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item h3{
+
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+}
 
 img{
 
-    width: 200px;
-    height: 200px;
+    width: 15vw;
+    height: 45vh;
+}
+
+button{
+
+    width: 5vw;
+    height: 3vh;
+    position: relative;
+    bottom: 100px;
+    background-color:transparent;
+}
+
+button:hover{
+
+    background-color: #e0cfbd;
+    cursor: pointer;
+
 }

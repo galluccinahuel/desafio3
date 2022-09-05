@@ -2,9 +2,10 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 import "./ItemListContainer.css";
-import { ItemCount } from "../ItemCount/ItemCount";
+
 import {AsideBar} from "../AsideBar/AsideBar";
 import {ItemList} from "../ItemList/ItemList";
+
 import imagenAnillo1 from "../../misc/Images/productos/anillos1.jpeg"
 import imagenAnillo2 from "../../misc/Images/productos/anillos2.jpeg"
 
@@ -23,7 +24,43 @@ const arregloProductos =[
         price: 10,
         pictureURL: imagenAnillo2
 
+    },
+    {
+        id: 2,
+        title: "collar",
+        price: 10,
+        pictureURL: imagenAnillo2
+
+    },
+    {
+        id: 2,
+        title: "collar",
+        price: 10,
+        pictureURL: imagenAnillo2
+
+    },
+    {
+        id: 2,
+        title: "collar",
+        price: 10,
+        pictureURL: imagenAnillo2
+
+    },
+    {
+        id: 2,
+        title: "collar",
+        price: 10,
+        pictureURL: imagenAnillo2
+
+    },
+    {
+        id: 2,
+        title: "collar",
+        price: 10,
+        pictureURL: imagenAnillo2
+
     }
+    
 ]
 
 export function ItemListContainer(){
@@ -39,9 +76,7 @@ export function ItemListContainer(){
                 resolve(arregloProductos);
 
             }, 2000);
-
         })
-
     }
 
     useEffect(()=>{
@@ -62,15 +97,13 @@ export function ItemListContainer(){
 
     },[])
 
-    
+
+
     return(
 
         <div className="ItemListContainer">
             <AsideBar/>
-            <div className="CardContainer">
-                <ItemList datos = {datos}/>
-
-            </div>
+            <ItemList datos = {datos}/>
         </div>
 
     )

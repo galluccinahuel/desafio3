@@ -5,7 +5,7 @@ export const Item = ({producto})=> {
 
     return(
 
-        <div >
+        <div className="item">
             <img src={producto.pictureURL} alt=""/>
             <h3>
                 {producto.title}
@@ -13,6 +13,7 @@ export const Item = ({producto})=> {
             <h3>
                 {producto.price}
             </h3>
+            <button>Detalle</button>
         </div>
 
     )

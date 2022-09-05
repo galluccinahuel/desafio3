@@ -1,5 +1,6 @@
 
 import "./Navbar.css";
+
 import {CartWidget} from "../CartWidget/CartWidget";
 
 

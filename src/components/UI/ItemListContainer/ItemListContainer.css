@@ -2,14 +2,6 @@
 .ItemListContainer{
 
     display: flex;
-    align-items: center;
-    
-}
-
-.CardContainer{
-
-    display: flex;
-    flex-wrap: wrap;
-
 
 }
+

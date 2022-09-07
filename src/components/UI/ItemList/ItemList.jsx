@@ -10,14 +10,11 @@ import {Item} from "../Item/Item";
 
             <div className="itemList">
                 {
-                    datos.map((datosProducto)=>{
+                    datos.map((dato)=>{
 
                         return(
 
-                            <>
-                                <Item producto = {datosProducto}/>
-                            </>
-
+                            <Item key={dato.id} producto={dato}/>
                         )
                     })
                 }

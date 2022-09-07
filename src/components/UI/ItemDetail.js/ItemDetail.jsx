@@ -1,13 +1,11 @@
 
-import {useState } from "react";
-
 export function ItemDetail({detalleProducto}){
     
-    const [detalle, setDetalle] = useState([]);
 
     return(
         <>
-            {detalleProducto.id}
+        <h1>{detalleProducto.title}</h1>
+        <h2>{detalleProducto.price}</h2>
         </>
     )
 

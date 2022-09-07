@@ -113,15 +113,8 @@ export function ItemDetailContainer(){
     return(
         <div className="ItemDetailContainer">
             {
-                detalleProductos.map((detalle)=>{
 
-                    return(
-
-                        <ItemDetail key = {detalle.id} detalleProducto={detalle}/>
-
-                    )
-
-                })
+               <ItemDetail detalleProducto={detalleProductos[0]}/>
 
             }
         </div>

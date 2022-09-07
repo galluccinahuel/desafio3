@@ -25,42 +25,42 @@ const arregloProductos =[
     },
     {
         id: 2,
-        title: "collar",
+        title: "anillo 2",
         price: 10,
         pictureURL: imagenAnillo2
 
     },
     {
         id: 3,
-        title: "collar",
+        title: "anillo 3",
         price: 10,
         pictureURL: imagenAnillo3
 
     },
     {
         id: 4,
-        title: "collar",
+        title: "anillo 4",
         price: 10,
         pictureURL: imagenAnillo4
 
     },
     {
         id: 5,
-        title: "collar",
+        title: "aros 1",
         price: 10,
         pictureURL: aros1
 
     },
     {
         id: 6,
-        title: "collar",
+        title: "aros 2",
         price: 10,
         pictureURL: aros2
 
     },
     {
         id: 7,
-        title: "collar",
+        title: "aros 3",
         price: 10,
         pictureURL: aros3
 

@@ -114,7 +114,7 @@ export function ItemDetailContainer(){
         <div className="ItemDetailContainer">
             {
 
-               <ItemDetail detalleProducto={detalleProductos[0]}/>
+               <ItemDetail detalleProducto={detalleProductos}/>
 
             }
         </div>

@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./ItemListContainer.css";
 
@@ -7,12 +6,12 @@ import {AsideBar} from "../AsideBar/AsideBar";
 import {ItemList} from "../ItemList/ItemList";
 
 import imagenAnillo1 from "../../misc/Images/productos/anillos1.jpeg"
-import imagenAnillo2 from "../../misc/Images/productos/anillos2.jpeg"
+import pulsera from "../../misc/Images/productos/anillos2.jpeg"
 import imagenAnillo3 from "../../misc/Images/productos/anillos3.jpeg"
-import imagenAnillo4 from "../../misc/Images/productos/anillos4.jpeg"
-import aros1 from "../../misc/Images/productos/aros1.jpeg"
-import aros2 from "../../misc/Images/productos/aros2.jpeg"
-import aros3 from "../../misc/Images/productos/aros3.jpeg"
+import aros from "../../misc/Images/productos/anillos4.jpeg"
+import aros2 from "../../misc/Images/productos/aros1.jpeg"
+import aros3 from "../../misc/Images/productos/aros2.jpeg"
+import aros4 from "../../misc/Images/productos/aros3.jpeg"
 
 const arregloProductos =[
 
@@ -25,9 +24,9 @@ const arregloProductos =[
     },
     {
         id: 2,
-        title: "anillo 2",
+        title: "Pulsera",
         price: 10,
-        pictureURL: imagenAnillo2
+        pictureURL: pulsera
 
     },
     {
@@ -39,16 +38,16 @@ const arregloProductos =[
     },
     {
         id: 4,
-        title: "anillo 4",
+        title: "Aros",
         price: 10,
-        pictureURL: imagenAnillo4
+        pictureURL: aros
 
     },
     {
         id: 5,
         title: "aros 1",
         price: 10,
-        pictureURL: aros1
+        pictureURL: aros
 
     },
     {

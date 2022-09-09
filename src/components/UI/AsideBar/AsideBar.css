@@ -6,40 +6,25 @@
     height: 60vh;
     background-color: #e0cfbd;
     color: white;
-    
 }
 
 .AsideBar h2{
 
     font-size: 3vh;
     padding: 0 20px;
-
 }
 
 .AsideBar-list{
     
     margin: auto;
-
 }
 
 
-.AsideBar-list  li{
+.AsideBar-list li{
     
     font-size: 3vh;
     color: white;
     list-style: none;
     padding: 5px;
-
 }
 
-.AsideBar-list a{
-
-    text-decoration: none;
-
-}
-
-.AsideBar-list li:hover{
-
-    color: black;
-
-}

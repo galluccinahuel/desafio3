@@ -1,15 +1,15 @@
 
 import "./CartWidget.css";
 
-import CarWingetIcon from '../CartWidget/CarWingetIcon.png';
+import BagIcon from '../CartWidget/shopping-bag.png';
 
 export function CartWidget(){
 
     return(
 
-        <div>
-            <img className='CartWidgetIcon' src={CarWingetIcon} />   
-        </div>
+        <>
+            <img className='CartWidgetIcon' src={BagIcon} />   
+        </>
         
     );
 

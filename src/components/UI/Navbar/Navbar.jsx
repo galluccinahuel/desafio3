@@ -1,24 +1,22 @@
 
+import { Link } from "react-router-dom";
+
 import "./Navbar.css";
 
 import {CartWidget} from "../CartWidget/CartWidget";
 
-
 export function Navbar(){
 
     return(
-
         <>
             <ul className="navBar-itemContainer">
-                <li className="navBar-item"><a href="#">Alianzas</a></li>
-                <li className="navBar-item"><a href="#">Anillos</a></li>
-                <li className="navBar-item"><a href="#">Pulseras</a></li>
-                <li className="navBar-item"><a href="#">Aros</a></li>
-                <CartWidget/>
-
+                <Link className="navBar-item" to="productos">Inicio</Link>
+                <Link className="navBar-item" to="Contacto">Contacto</Link>
+                <Link className="navBar-item" to="Nosotros">Nosotros</Link>
+                <Link className="navBar-item" to="productos">
+                    <CartWidget/>
+                </Link>
             </ul>
-
         </>
-
-    );
+    )
 }

@@ -3,12 +3,9 @@ export function ItemDetail({detalleProducto}){
 
     return(
         <>
-            <h1>{detalleProducto[0].title}</h1>
-            <h2>{detalleProducto[0].price}</h2>
-            <h2>{detalleProducto[0].descripcion}</h2>
-
+            <h1>{detalleProducto.title}</h1>
+            <h2>{detalleProducto.price}</h2>
+            <h2>{detalleProducto.descripcion}</h2>
         </>
     )
-
-
 }

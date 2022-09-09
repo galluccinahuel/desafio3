@@ -15,21 +15,21 @@ import aros2 from "../../misc/Images/productos/anillos2.jpeg"
 
 export function ItemDetailContainer(){
 
-    const [detalleProductos, setDetalleProductos] = useState([])
+    const [detalleProductos, setDetalleProductos] = useState({})
 
     const arregloDetalles =[
 
         {
             id: 1,
             title: "anillo",
-            price: 5,
+            price: 50,
             pictureURL: imagenAnillo1,
             descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum minima ut!"
         },
         {
             id: 2,
             title: "anillo",
-            price: 5,
+            price: 15,
             pictureURL: imagenAnillo2,
             descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum minima ut!"
         },
@@ -80,42 +80,26 @@ export function ItemDetailContainer(){
 
 
     const obtenerDetalle =()=>{
-
         return new Promise((resolve,reject)=>{
-
             setTimeout(()=>{
-
-                resolve(arregloDetalles);
-
+                resolve(arregloDetalles[1]);
             }, 2000);
         })
     }
 
     useEffect(()=>{
-
-        
         const asynGetDetalle  = async()=>{
-
-            try {
-   
-               const datos = await obtenerDetalle();
-                setDetalleProductos(datos);
-            } catch (error) {
-               console.log(error);
-            }
-   
-           }
+            const datos = await obtenerDetalle();
+            setDetalleProductos(datos); 
+        }
         asynGetDetalle();
-        
     },[])
     
 
     return(
         <div className="ItemDetailContainer">
             {
-
                <ItemDetail detalleProducto={detalleProductos}/>
-
             }
         </div>
     )

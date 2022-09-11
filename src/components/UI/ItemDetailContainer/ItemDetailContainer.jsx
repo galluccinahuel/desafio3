@@ -158,7 +158,7 @@ export function ItemDetailContainer(){
     const obtenerDetalle =()=>{
         return new Promise((resolve,reject)=>{
             setTimeout(()=>{
-                resolve(arregloProductos[id]);
+                resolve(arregloProductos[id-1]);
             }, 2000);
         })
     }

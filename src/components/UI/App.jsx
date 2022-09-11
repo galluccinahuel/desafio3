@@ -22,7 +22,7 @@ export function App(){
                 <Navbar/>
                 <Routes>
                     <Route path="productos" element={<ItemListContainer/>}/>
-                    <Route path="productos/:topMetal" element={<ItemListContainer/>}/>
+                    <Route path="productos/:tipoMetal" element={<ItemListContainer/>}/>
                     <Route path="/contacto" element={<Contacto/>}/>
                     <Route path="/nosotros" element={<Nosotros/>}/>
                     <Route path="*" element={<Error/>}/>

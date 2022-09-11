@@ -1,75 +1,144 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 import "./ItemListContainer.css";
 
 import {AsideBar} from "../AsideBar/AsideBar";
 import {ItemList} from "../ItemList/ItemList";
 
-import imagenAnillo1 from "../../misc/Images/productos/anillos1.jpeg"
-import pulsera from "../../misc/Images/productos/anillos2.jpeg"
-import imagenAnillo3 from "../../misc/Images/productos/anillos3.jpeg"
-import aros from "../../misc/Images/productos/anillos4.jpeg"
-import aros2 from "../../misc/Images/productos/aros1.jpeg"
-import aros3 from "../../misc/Images/productos/aros2.jpeg"
-import aros4 from "../../misc/Images/productos/aros3.jpeg"
+import imagenAnilloOro1 from "../../misc/Images/productos/anilloOro1.jpeg";
+import imagenAnilloOro2 from "../../misc/Images/productos/anilloOro2.jpeg";
+import imagenAnilloPlata1 from "../../misc/Images/productos/anilloPlata1.jpeg";
+import imagenAnilloPlata2 from "../../misc/Images/productos/anilloPlata2.jpeg";
+import imagenAnilloPlata3 from "../../misc/Images/productos/anilloPlata3.jpeg";
+import imagenAnilloPlata4 from "../../misc/Images/productos/anilloPlata4.jpeg";
+import imagenAnilloPlata5 from "../../misc/Images/productos/anilloPlata5.jpeg";
+import imagenArosOro1 from "../../misc/Images/productos/arosOro1.jpeg";
+import imagenArosOro2 from "../../misc/Images/productos/arosOro2.jpeg";
+import imagenArosOro3 from "../../misc/Images/productos/arosOro3.jpeg";
+import imagenArosOro4 from "../../misc/Images/productos/arosOro4.jpeg";
+import imagenArosOro5 from "../../misc/Images/productos/arosOro5.jpeg";
+import imagenArosOro6 from "../../misc/Images/productos/arosOro6.jpeg";
+import imagenArosOro7 from "../../misc/Images/productos/arosOro7.jpeg";
+import imagenCollarOro1 from "../../misc/Images/productos/collarOro1.jpeg";
+import imagenCollarOro2 from "../../misc/Images/productos/collarOro2.jpeg";
+import imagenCollarPlata1 from "../../misc/Images/productos/collarPlata1.jpeg";
+import imagenCollarPlata2 from "../../misc/Images/productos/collarPlata2.jpeg";
+import imagenCollarPlata3 from "../../misc/Images/productos/collarPlata3.jpeg";
+import imagenCollarPlata4 from "../../misc/Images/productos/collarPlata4.jpeg";
+import imagenPulseraOro1 from "../../misc/Images/productos/pulseraOro1.jpeg";
+
+
+
 
 const arregloProductos =[
 
     {
         id: 1,
-        title: "anillo",
+        title: "anillo oro 1",
         price: 5,
-        pictureURL: imagenAnillo1
-
+        pictureURL: imagenAnilloOro1,
+        categoria: "oro"
     },
     {
         id: 2,
-        title: "Pulsera",
+        title: "anillo oro 2",
         price: 10,
-        pictureURL: pulsera
-
+        pictureURL: imagenAnilloOro2,
+        categoria: "oro"
     },
     {
         id: 3,
-        title: "anillo 3",
+        title: "anillo plata 1",
         price: 10,
-        pictureURL: imagenAnillo3
-
+        pictureURL: imagenAnilloPlata1,
+        categoria: "plata"
     },
     {
         id: 4,
-        title: "Aros",
+        title: "anillo plata 2",
         price: 10,
-        pictureURL: aros
-
+        pictureURL: imagenAnilloPlata2,
+        categoria: "plata"
     },
     {
         id: 5,
-        title: "aros 1",
+        title: "anillo plata 3",
         price: 10,
-        pictureURL: aros
-
+        pictureURL: imagenAnilloPlata3,
+        categoria: "plata"
     },
     {
         id: 6,
-        title: "aros 2",
+        title: "anillo plata 4",
         price: 10,
-        pictureURL: aros2
-
+        pictureURL: imagenAnilloPlata4,
+        categoria: "plata"
     },
     {
         id: 7,
-        title: "aros 3",
+        title: "anillo plata 5",
         price: 10,
-        pictureURL: aros3
-
-    }
-    
+        pictureURL: imagenAnilloPlata5,
+        categoria: "plata"
+    },
+    {
+        id: 8,
+        title: "aros oro 1",
+        price: 10,
+        pictureURL: imagenArosOro1,
+        categoria: "oro"
+    },
+    {
+        id: 9,
+        title: "aros oro 2",
+        price: 10,
+        pictureURL: imagenArosOro2,
+        categoria: "oro"
+    },
+    {
+        id: 10,
+        title: "aros oro 3",
+        price: 10,
+        pictureURL: imagenArosOro3,
+        categoria: "oro"
+    },
+    {
+        id: 11,
+        title: "aros oro 4",
+        price: 10,
+        pictureURL: imagenArosOro4,
+        categoria: "oro"
+    },
+    {
+        id: 12,
+        title: "aros oro 5",
+        price: 10,
+        pictureURL: imagenArosOro5,
+        categoria: "oro"
+    },
+    {
+        id: 13,
+        title: "aros oro 6",
+        price: 10,
+        pictureURL: imagenArosOro6,
+        categoria: "oro"
+    },
+    {
+        id: 14,
+        title: "aros oro 7",
+        price: 10,
+        pictureURL: imagenArosOro7,
+        categoria: "oro"
+    } 
 ]
+
 
 export function ItemListContainer(){
 
+    const {tipoMetal} = useParams();
     const  [datos, setDatos] = useState([]);
+    console.log("tipoMetal", tipoMetal);
 
     const obtenerDatosProductos =()=>{
 
@@ -89,19 +158,25 @@ export function ItemListContainer(){
 
             try {
    
-               const datos = await obtenerDatosProductos();
-               setDatos(datos);
+               const datos = await obtenerDatosProductos(); 
+               const nuevaLista = datos.filter(i=>i.categoria === tipoMetal);
+
+                if (tipoMetal === undefined) {
+                    setDatos(datos);
+                }
+                else {
+                    setDatos(nuevaLista);
+                }
+
 
             } catch (error) {
                console.log(error);
             }
    
-           }
+        }
         asyncobtenerDatosProductos();
 
-    },[])
-
-
+    },[tipoMetal])
 
     return(
 
@@ -109,8 +184,5 @@ export function ItemListContainer(){
             <AsideBar/>
             <ItemList datos = {datos}/>
         </div>
-
     )
-
-
 }

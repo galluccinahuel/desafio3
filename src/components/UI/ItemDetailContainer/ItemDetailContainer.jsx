@@ -33,6 +33,8 @@ import imagenPulseraOro1 from "../../misc/Images/productos/pulseraOro1.jpeg";
 
 export function ItemDetailContainer(){
 
+    const {id} = useParams();
+
     const [detalleProductos, setDetalleProductos] = useState({})
 
 
@@ -156,7 +158,7 @@ export function ItemDetailContainer(){
     const obtenerDetalle =()=>{
         return new Promise((resolve,reject)=>{
             setTimeout(()=>{
-                resolve(arregloProductos[0]);
+                resolve(arregloProductos[id]);
             }, 2000);
         })
     }

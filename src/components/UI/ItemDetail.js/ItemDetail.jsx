@@ -1,7 +1,4 @@
 
-import { Link } from "react-router-dom";
-
-
 export function ItemDetail({detalleProducto}){
 
     const {id, title, price, pictureURL,categoria, descripcion} = detalleProducto;

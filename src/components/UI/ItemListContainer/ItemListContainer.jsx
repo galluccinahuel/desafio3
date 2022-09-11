@@ -151,8 +151,7 @@ const arregloProductos =[
 export function ItemListContainer(){
 
     const {tipoMetal} = useParams();
-    const  [datos, setDatos] = useState([]);
-    console.log("tipoMetal", tipoMetal);
+    const [datos, setDatos] = useState([]);
 
     const obtenerDatosProductos =()=>{
 

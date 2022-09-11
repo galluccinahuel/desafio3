@@ -1,5 +1,7 @@
 
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+
 
 import "./ItemDetailContainer.css";
 
@@ -33,71 +35,128 @@ export function ItemDetailContainer(){
 
     const [detalleProductos, setDetalleProductos] = useState({})
 
-    const arregloDetalles =[
+
+    const arregloProductos =[
 
         {
             id: 1,
-            title: "anillo",
-            price: 50,
+            title: "anillo oro 1",
+            price: 5,
             pictureURL: imagenAnilloOro1,
-            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum minima ut!"
+            categoria: "oro",
+            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
         },
         {
             id: 2,
-            title: "anillo",
-            price: 15,
+            title: "anillo oro 2",
+            price: 10,
             pictureURL: imagenAnilloOro2,
-            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum minima ut!"
+            categoria: "oro",
+            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
         },
         {
             id: 3,
-            title: "anillo",
-            price: 5,
+            title: "anillo plata 1",
+            price: 10,
             pictureURL: imagenAnilloPlata1,
-            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum minima ut!"
+            categoria: "plata",
+            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
         },
         {
             id: 4,
-            title: "anillo",
-            price: 5,
+            title: "anillo plata 2",
+            price: 10,
             pictureURL: imagenAnilloPlata2,
-            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum minima ut!"
+            categoria: "plata",
+            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
         },
         {
             id: 5,
-            title: "anillo",
-            price: 5,
+            title: "anillo plata 3",
+            price: 10,
             pictureURL: imagenAnilloPlata3,
-            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum minima ut!"
+            categoria: "plata",
+            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
         },
         {
             id: 6,
-            title: "anillo",
-            price: 5,
+            title: "anillo plata 4",
+            price: 10,
             pictureURL: imagenAnilloPlata4,
-            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum minima ut!"
+            categoria: "plata",
+            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
         },
         {
             id: 7,
-            title: "anillo",
-            price: 5,
+            title: "anillo plata 5",
+            price: 10,
             pictureURL: imagenAnilloPlata5,
-            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum minima ut!"
+            categoria: "plata",
+            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
         },
         {
             id: 8,
-            title: "anillo",
-            price: 5,
+            title: "aros oro 1",
+            price: 10,
             pictureURL: imagenArosOro1,
-            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum minima ut!"
-        }      
+            categoria: "oro",
+            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
+        },
+        {
+            id: 9,
+            title: "aros oro 2",
+            price: 10,
+            pictureURL: imagenArosOro2,
+            categoria: "oro",
+            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
+        },
+        {
+            id: 10,
+            title: "aros oro 3",
+            price: 10,
+            pictureURL: imagenArosOro3,
+            categoria: "oro",
+            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
+        },
+        {
+            id: 11,
+            title: "aros oro 4",
+            price: 10,
+            pictureURL: imagenArosOro4,
+            categoria: "oro",
+            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
+        },
+        {
+            id: 12,
+            title: "aros oro 5",
+            price: 10,
+            pictureURL: imagenArosOro5,
+            categoria: "oro",
+            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
+        },
+        {
+            id: 13,
+            title: "aros oro 6",
+            price: 10,
+            pictureURL: imagenArosOro6,
+            categoria: "oro",
+            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
+        },
+        {
+            id: 14,
+            title: "aros oro 7",
+            price: 10,
+            pictureURL: imagenArosOro7,
+            categoria: "oro",
+            descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
+        } 
     ]
 
 
     const obtenerDetalle =()=>{
         return new Promise((resolve,reject)=>{
             setTimeout(()=>{
-                resolve(arregloDetalles[1]);
+                resolve(arregloProductos[0]);
             }, 2000);
         })
     }
@@ -114,7 +173,7 @@ export function ItemDetailContainer(){
     return(
         <div className="ItemDetailContainer">
             {
-               <ItemDetail detalleProducto={detalleProductos}/>
+                <ItemDetail detalleProducto={detalleProductos}/>
             }
         </div>
     )

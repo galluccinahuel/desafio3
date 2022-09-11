@@ -38,98 +38,112 @@ const arregloProductos =[
         title: "anillo oro 1",
         price: 5,
         pictureURL: imagenAnilloOro1,
-        categoria: "oro"
+        categoria: "oro",
+        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
     },
     {
         id: 2,
         title: "anillo oro 2",
         price: 10,
         pictureURL: imagenAnilloOro2,
-        categoria: "oro"
+        categoria: "oro",
+        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
     },
     {
         id: 3,
         title: "anillo plata 1",
         price: 10,
         pictureURL: imagenAnilloPlata1,
-        categoria: "plata"
+        categoria: "plata",
+        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
     },
     {
         id: 4,
         title: "anillo plata 2",
         price: 10,
         pictureURL: imagenAnilloPlata2,
-        categoria: "plata"
+        categoria: "plata",
+        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
     },
     {
         id: 5,
         title: "anillo plata 3",
         price: 10,
         pictureURL: imagenAnilloPlata3,
-        categoria: "plata"
+        categoria: "plata",
+        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
     },
     {
         id: 6,
         title: "anillo plata 4",
         price: 10,
         pictureURL: imagenAnilloPlata4,
-        categoria: "plata"
+        categoria: "plata",
+        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
     },
     {
         id: 7,
         title: "anillo plata 5",
         price: 10,
         pictureURL: imagenAnilloPlata5,
-        categoria: "plata"
+        categoria: "plata",
+        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
     },
     {
         id: 8,
         title: "aros oro 1",
         price: 10,
         pictureURL: imagenArosOro1,
-        categoria: "oro"
+        categoria: "oro",
+        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
     },
     {
         id: 9,
         title: "aros oro 2",
         price: 10,
         pictureURL: imagenArosOro2,
-        categoria: "oro"
+        categoria: "oro",
+        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
     },
     {
         id: 10,
         title: "aros oro 3",
         price: 10,
         pictureURL: imagenArosOro3,
-        categoria: "oro"
+        categoria: "oro",
+        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
     },
     {
         id: 11,
         title: "aros oro 4",
         price: 10,
         pictureURL: imagenArosOro4,
-        categoria: "oro"
+        categoria: "oro",
+        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
     },
     {
         id: 12,
         title: "aros oro 5",
         price: 10,
         pictureURL: imagenArosOro5,
-        categoria: "oro"
+        categoria: "oro",
+        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
     },
     {
         id: 13,
         title: "aros oro 6",
         price: 10,
         pictureURL: imagenArosOro6,
-        categoria: "oro"
+        categoria: "oro",
+        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
     },
     {
         id: 14,
         title: "aros oro 7",
         price: 10,
         pictureURL: imagenArosOro7,
-        categoria: "oro"
+        categoria: "oro",
+        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quidem laborum a aspernatur commodi provident vero itaque dolorem ipsam? Ex dolorum neque id, illo a deserunt nostrum"
     } 
 ]
 
@@ -161,18 +175,16 @@ export function ItemListContainer(){
                const datos = await obtenerDatosProductos(); 
                const nuevaLista = datos.filter(i=>i.categoria === tipoMetal);
 
-                if (tipoMetal === undefined) {
+                if (tipoMetal === undefined){
                     setDatos(datos);
                 }
                 else {
                     setDatos(nuevaLista);
                 }
 
-
             } catch (error) {
                console.log(error);
             }
-   
         }
         asyncobtenerDatosProductos();
 

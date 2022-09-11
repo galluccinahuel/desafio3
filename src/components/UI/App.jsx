@@ -8,6 +8,8 @@ import { ItemListContainer } from "./ItemListContainer/ItemListContainer";
 import { TopBar } from "./TopBar/TopBar";
 import { BrandBar } from "./BrandBar/BrandBar";
 import {ItemDetailContainer } from "./ItemDetailContainer/ItemDetailContainer";
+import { ItemDetail } from "./ItemDetail.js/ItemDetail";
+
 import { Contacto } from "../contacto/Contacto";
 import { Nosotros } from "../nosotros/Nosotros";
 import { Error } from "../error/Error";
@@ -23,6 +25,7 @@ export function App(){
                 <Routes>
                     <Route path="productos" element={<ItemListContainer/>}/>
                     <Route path="productos/:tipoMetal" element={<ItemListContainer/>}/>
+                    <Route path="productos/:id" element={<ItemDetail/>}/>
                     <Route path="/contacto" element={<Contacto/>}/>
                     <Route path="/nosotros" element={<Nosotros/>}/>
                     <Route path="*" element={<Error/>}/>

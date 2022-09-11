@@ -25,7 +25,6 @@ export function App(){
                 <Routes>
                     <Route path="productos" element={<ItemListContainer/>}/>
                     <Route path="productos/:tipoMetal" element={<ItemListContainer/>}/>
-                    <Route path="productos/:id" element={<ItemDetail/>}/>
                     <Route path="/contacto" element={<Contacto/>}/>
                     <Route path="/nosotros" element={<Nosotros/>}/>
                     <Route path="*" element={<Error/>}/>

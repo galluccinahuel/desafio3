@@ -8,9 +8,22 @@
 }
 
 .imgDetail{
-
-    width: 30%;
-    height: 60%;
+    
     margin: 2%;
+}
+
+.itemTitle{
+
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+span{
+
+    color: white;
+    background-color: #e0cfbd;
+    padding: .5%;
+
 }
 

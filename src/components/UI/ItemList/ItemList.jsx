@@ -1,5 +1,4 @@
 
-import { Link } from "react-router-dom";
  
 import "./ItemList.css"
 
@@ -15,9 +14,7 @@ import {Item} from "../Item/Item";
                     datos.map((dato)=>{
 
                         return(
-                            <Link key={dato.id} to={'/item/' + dato.id}>
-                                <Item  producto={dato}/>
-                            </Link>
+                                <Item producto={dato}/>
                         )
                     })
                 }

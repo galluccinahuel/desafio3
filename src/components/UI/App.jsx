@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
@@ -8,8 +8,8 @@ import { ItemListContainer } from "./ItemListContainer/ItemListContainer";
 import { TopBar } from "./TopBar/TopBar";
 import { BrandBar } from "./BrandBar/BrandBar";
 import {ItemDetailContainer } from "./ItemDetailContainer/ItemDetailContainer";
-import { ItemDetail } from "./ItemDetail.js/ItemDetail";
 
+import {Carrito} from "../Carrito/Carrito";
 import { Contacto } from "../contacto/Contacto";
 import { Nosotros } from "../nosotros/Nosotros";
 import { Error } from "../error/Error";
@@ -28,6 +28,7 @@ export function App(){
                     <Route path="item/:id" element={<ItemDetailContainer/>}/>
                     <Route path="/contacto" element={<Contacto/>}/>
                     <Route path="/nosotros" element={<Nosotros/>}/>
+                    <Route path="/carrito" element={<Carrito/>}/>
                     <Route path="*" element={<Error/>}/>
                 </Routes>
             </div>

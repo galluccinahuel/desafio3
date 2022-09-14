@@ -2,10 +2,18 @@
 
 .itemCount {
 
-    margin: 2px;
-    width: 20vh;
-    height: 20vh;
+    margin: 2%;
+    width: 40vh;
+    height: 30vh;
     background-color: bisque;
     border:1px  solid black;
+
+}
+
+.btn{
+    
+    margin: 5%;
+    width: 30%;
+    height: auto;
 
 }

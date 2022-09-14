@@ -4,47 +4,43 @@ import { useState } from "react";
 import './ItemCount.css';
 
 
-export const ItemCount =(props)=>{
+export function ItemCount ({stockInicial, stockTotal, onAdd}){
 
-    const{stockDisponible, valorInitial, agregarProducto}  = props;
-
-    const [contador, setContador] = useState(valorInitial);
+    const [count, setCount] = useState(stockInicial);
 
 
+    const SumarUnidades=()=>{
 
-    const incrementar =()=>{
-
-        if(contador < stockDisponible){
-
-            setContador(contador + 1);
+        if (count<stockTotal) {
+            
+            setCount(count+1);
+            console.log(count);
         }
+
 
     }
 
-    const decrementar =()=>{
+    const RestarUnidades=()=>{
 
-        if(contador <= 1){
+        if (count>1) {
+            
+            setCount(count-1);
+            console.log(count);
 
-            setContador(1);
-
-        }
-        else{
-
-            setContador(contador - 1);
 
         }
-        
+
+
     }
+
 
     return (
 
-        <div  className="itemCount">
-            <p>Unidades: {contador}</p>
-            <button onClick={decrementar}>-</button>
-            <button onClick={incrementar}>+</button>
-            <button onClick={()=>(agregarProducto(contador))}>Agregar</button>
+        <div className="itemCount">
+            <p>Unidades disponibles: {stockTotal} </p>
+            <input type="button" className="btn" value="Agregar" onClick={()=>onAdd(count)}/>
+            <input type="button" className="btn" value="+" onClick={SumarUnidades}/>
+            <input type="button" className="btn" value="-" onClick={RestarUnidades}/>
         </div>
     )
-
-
 }

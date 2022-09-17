@@ -16,8 +16,6 @@ export function ItemCount ({stockInicial, stockTotal, onAdd}){
             setCount(count+1);
             console.log(count);
         }
-
-
     }
 
     const RestarUnidades=()=>{
@@ -26,11 +24,7 @@ export function ItemCount ({stockInicial, stockTotal, onAdd}){
             
             setCount(count-1);
             console.log(count);
-
-
         }
-
-
     }
 
 
@@ -41,6 +35,7 @@ export function ItemCount ({stockInicial, stockTotal, onAdd}){
             <input type="button" className="btn" value="Agregar" onClick={()=>onAdd(count)}/>
             <input type="button" className="btn" value="+" onClick={SumarUnidades}/>
             <input type="button" className="btn" value="-" onClick={RestarUnidades}/>
+            <p>{count}</p>
         </div>
     )
 }

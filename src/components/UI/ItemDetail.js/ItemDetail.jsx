@@ -3,8 +3,12 @@
 import "./ItemDetail.css";
 
 import {ItemCount} from "../ItemCount/ItemCount"
+import { useContext } from "react";
+import { CartContext } from "../../../Context/CarContext";
 
 export function ItemDetail({detalleProducto}){
+
+    const {addProducto} = useContext(CartContext);
 
     const {id, title, price, pictureURL,categoria, descripcion} = detalleProducto;
 
@@ -13,8 +17,15 @@ export function ItemDetail({detalleProducto}){
 
         console.log("onAdd called", count);
 
+        const nuevoProducto = {...detalleProducto, cantidad: count};
+
+        console.log("nuevoProducto", nuevoProducto);
+
+        addProducto();
 
     }
+
+    
 
 
     return(

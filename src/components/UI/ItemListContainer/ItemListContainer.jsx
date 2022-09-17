@@ -158,7 +158,7 @@ export function ItemListContainer(){
         return new Promise((resolve,reject)=>{
 
             setTimeout(()=>{
-
+                
                 resolve(arregloProductos);
 
             }, 2000);

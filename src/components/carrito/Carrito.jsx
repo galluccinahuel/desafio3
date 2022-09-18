@@ -5,6 +5,7 @@ import { CartContext } from "../../Context/CarContext"
 export function Carrito(){
 
     const {carrito} = useContext(CartContext);
+    console.log("Carrito",carrito);
 
 
     return(
@@ -13,7 +14,11 @@ export function Carrito(){
             {
                 carrito.map(item=>(
 
-                    <p>{item.price}</p>
+                    <div>
+                        <p>{item.title}</p>
+                        <p>{item.price}</p>
+                    </div>
+
 
                 ))
 

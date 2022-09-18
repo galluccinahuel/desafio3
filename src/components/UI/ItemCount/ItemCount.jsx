@@ -14,7 +14,6 @@ export function ItemCount ({stockInicial, stockTotal, onAdd}){
         if (count<stockTotal) {
             
             setCount(count+1);
-            console.log(count);
         }
     }
 
@@ -23,7 +22,6 @@ export function ItemCount ({stockInicial, stockTotal, onAdd}){
         if (count>1) {
             
             setCount(count-1);
-            console.log(count);
         }
     }
 

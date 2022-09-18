@@ -15,13 +15,12 @@ export function ItemDetail({detalleProducto}){
 
     const onAdd = (count)=>{
 
-        console.log("onAdd called", count);
 
         const nuevoProducto = {...detalleProducto, cantidad: count};
 
         console.log("nuevoProducto", nuevoProducto);
 
-        addProducto();
+        addProducto(nuevoProducto);
 
     }
 
